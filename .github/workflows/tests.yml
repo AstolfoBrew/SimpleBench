@@ -32,8 +32,9 @@ jobs:
           sudo apt install unzip
       - name: Get Luau
         run: |
-          curl -O luau.zip https://github.com/Roblox/luau/releases/download/0.528/luau-ubuntu.zip
+          curl -OL luau.zip https://github.com/Roblox/luau/releases/latest/download/luau-ubuntu.zip
           unzip luau.zip -d luau
       - name: Run Benchmark
         run: |
-          lua SimpleBench.lua
+          chmod +x luau/luau
+          luau/luau SimpleBench.lua

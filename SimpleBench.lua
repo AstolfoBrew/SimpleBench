@@ -18,8 +18,10 @@ if _G and _G.SimpleBenchSettings then
   local Settings = _G.SimpleBenchSettings;
   print(Settings)
   if (typeof(Settings) ~= 'table') then return error('Invalid _G.SimpleBenchSettings.') end
-  if typeof(Settings.Iteraions) == 'number' then Iterations = Settings.Iterations; end
-  if typeof(Settings.RBXWaitAfterRun) == 'boolean' then RBXWaitAfterRun = Settings.RBXWaitAfterRun; end
+  if typeof(Settings.Iterations) == 'number' then Iterations = Settings.Iterations; end
+  if typeof(Settings.RBXWaitAfterRun) == 'boolean' or Settings.RBXWaitAfterRun then
+    RBXWaitAfterRun = Settings.RBXWaitAfterRun;
+  end
   if Settings.Branch and Settings.Branch ~= 'Release' then warn('Branch is not release. Results may vary between commits.'); end
   if typeof(Settings.Silent) == 'table' then
     if typeof(Settings.Silent.print) == 'function' then

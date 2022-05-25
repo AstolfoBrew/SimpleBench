@@ -23,3 +23,17 @@ jobs:
       - name: Run Benchmark
         run: |
           lua SimpleBench.lua
+  test-luau:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Unzip
+        run: |
+          sudo apt install unzip
+      - name: Get Luau
+        run: |
+          curl -O luau.zip https://github.com/Roblox/luau/releases/download/0.528/luau-ubuntu.zip
+          unzip luau.zip -d luau
+      - name: Run Benchmark
+        run: |
+          lua SimpleBench.lua

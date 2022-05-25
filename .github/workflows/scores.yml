@@ -31,3 +31,26 @@ jobs:
           git commit -m "Add generated results"
           git pull
           git push
+  benchmark-luau:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Unzip
+        run: |
+          sudo apt install unzip
+      - name: Get Luau
+        run: |
+          curl -O luau.zip https://github.com/Roblox/luau/releases/download/0.528/luau-ubuntu.zip
+          unzip luau.zip -d luau
+      - name: Run Benchmark
+        run: |
+          lua SimpleBench.lua > out/lua-luau.txt
+      - name: Pull and Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git config pull.rebase true
+          git add .
+          git commit -m "Add generated results"
+          git pull
+          git push

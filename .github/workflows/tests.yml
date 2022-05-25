@@ -26,6 +26,7 @@ jobs:
         run: |
           lua SimpleBench.lua
   benchmark:
+    needs: test
     runs-on: ubuntu-latest
 
     strategy:

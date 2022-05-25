@@ -13,13 +13,7 @@ local Iterations = 50; --         Change to amount of total benchmark runs | Def
 local RBXWaitAfterRun = true; --  Enable if, in roblox, an obfuscator (or horrible lua env) freezes for longer than 1s*runs
 ------------- CODE
 function tohex(num)
-  local charset = {'0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'C'; 'D'; 'E'; 'F'}
-  local tmp = {}
-  repeat
-    table.insert(tmp, 1, charset[num % 16 + 1])
-    num = math.floor(num / 16)
-  until num == 0
-  local v = table.concat(tmp)
+  local v = string.format('%02X', num)
   if #v == 1 then v = '0' .. v end
   return v
 end

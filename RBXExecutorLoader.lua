@@ -46,7 +46,7 @@ local ScriptUrl = Settings.Branch == 'Release' and
                                     Settings.Branch);
 local ScriptSrc = game:HttpGetAsync(ScriptUrl);
 
-local ExecInfoSrcChunk, Err = loadstring(ExecInfoSrc);
+local ExecInfoSrcChunk, Err = loadstring(ExecInfoSrc, 'RBXExecutorInfo.lua');
 local ExecInfo;
 if typeof(ExecInfoSrcChunk) ~= 'function' then
   warn('Error getting Executor Information Chunkname: ', Err or ExecInfoSrcChunk)
@@ -79,7 +79,7 @@ if getgenv and writefile then
   end)
 end
 
-local FinalScore = loadstring(ScriptSrc)();
+local FinalScore = loadstring(ScriptSrc, 'SimpleBench.lua')();
 
 if writefile then
   writefile('SimpleBench.log',

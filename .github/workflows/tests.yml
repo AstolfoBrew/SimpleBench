@@ -33,7 +33,7 @@ jobs:
       - name: Get Luau
         run: |
           curl -L -i --output luau.zip https://github.com/Roblox/luau/releases/latest/download/luau-ubuntu.zip
-          echo "unzip -o -d luau luau.zip" > extract.sh
+          echo "unzip -o -d luau luau.zip; echo done" > extract.sh
           chmod +x extract.sh
           ./extract.sh
           rm extract.sh

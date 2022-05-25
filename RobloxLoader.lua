@@ -34,7 +34,7 @@ if string.split then RepoSplit = string.split(Repo, '/') end
 local RepoOwner = RepoSplit[1] or 'AstolfoBrew';
 local RepoName = RepoSplit[2] or 'SimpleBench';
 local ExecInfoUrl = string.format('https://raw.githubusercontent.com/%s/%s/%s/ExecutorInfo.lua', RepoOwner, RepoName,
-                                  Settings.Branch);
+                                  Settings.Branch == 'Release' and 'main' or Settings.Branch);
 local ExecInfoSrc = game:HttpGetAsync(ExecInfoUrl);
 local ScriptUrl = Settings.Branch == 'Release' and
                       string.format('https://github.com/%s/%s/releases/latest/download/SimpleBench.lua', RepoOwner, RepoName) or
@@ -45,13 +45,13 @@ local ScriptUrl = Settings.Branch == 'Release' and
                                     Settings.Branch);
 local ScriptSrc = game:HttpGetAsync(ScriptUrl);
 
-local ExecInfoSrcChunk,Err = loadstring(ExecInfoSrc);
+local ExecInfoSrcChunk, Err = loadstring(ExecInfoSrc);
 local ExecInfo;
 if typeof(ExecInfoSrcChunk) == 'function' then
-  warn('Error getting Executor Information Chunkname: ',Err)
-  ExecInfo={['name']='Unknown'};
+  warn('Error getting Executor Information Chunkname: ', Err)
+  ExecInfo = {['name'] = 'Unknown'};
 else
-  ExecInfo=ExecInfoSrcChunk();
+  ExecInfo = ExecInfoSrcChunk();
 end
 
 if _ENV then getgenv = function() return _ENV end end

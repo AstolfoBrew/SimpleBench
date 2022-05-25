@@ -6,7 +6,7 @@
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench
 ------------- DEFAULTS
-local Settings = {['RBXWaitAfterRun'] = false; ['Iterations'] = 50; ['Branch'] = 'Release'};
+local Settings = {['RBXWaitAfterRun'] = false; ['Iterations'] = 50; ['Branch'] = 'Release'; ['Silent'] = false};
 ------------- CODE
 if not string or not string.split then
   error('{SimpleBench-Loader} ~ Missing string?.split - Please use the regular SimpleBench.')

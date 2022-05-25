@@ -24,11 +24,27 @@ jobs:
           sudo apt install lua${{ matrix.lua-version }}
       - name: Run Benchmark
         run: |
+          lua SimpleBench.lua
+  benchmark:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        lua-version: ['50', 5.1, 5.2, 5.3]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Lua
+        run: |
+          sudo apt install lua${{ matrix.lua-version }}
+      - name: Run Benchmark
+        run: |
           lua SimpleBench.lua > out/lua-${{ matrix.lua-version }}.txt
-      - name: Push
+      - name: Pull and Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "Add generated results"
+          git pull
           git push

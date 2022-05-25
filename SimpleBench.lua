@@ -124,14 +124,15 @@ for run = 1, Iterations, 1 do
   runBenchmark('Empty Function', itPerBench, function() end, 26 / 3)
   runBenchmark('void', itPerBench, function() void() end, 22 / 3)
   local i = 679483;
-  runBenchmark('i+1', itPerBench, function() void(i + 1); end)
-  runBenchmark('i-1', itPerBench, function() void(i - 1); end)
-  runBenchmark('i/2', itPerBench, function() void(i / 2); end)
-  runBenchmark('i*2', itPerBench, function() void(i * 2); end)
+  runBenchmark('i+1', itPerBench, function() void(i + 1); end, 18 / 3)
+  runBenchmark('i-1', itPerBench, function() void(i - 1); end, 18 / 3)
+  runBenchmark('i/2', itPerBench, function() void(i / 2); end, 12 / 3)
+  runBenchmark('i*2', itPerBench, function() void(i * 2); end, 12 / 3)
   runBenchmark('i%2', itPerBench, function() void(i % 2); end)
   runBenchmark('i^2', itPerBench, function() void(i ^ 2); end)
   runBenchmark('1/i', itPerBench, function() void(1 / i); end)
   runBenchmark('sqrt(i)', itPerBench, function() void(math.sqrt(i)); end)
+  runBenchmark('s..s', itPerBench, function() void(i..i); end)
   runBenchmark('index table nil', itPerBench, (function()
     local t = {};
     return function() void(t.a); end

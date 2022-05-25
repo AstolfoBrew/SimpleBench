@@ -1,7 +1,5 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+# Ensures functionality of benchmark after every commit
+name: Tests
 
 on:
   push:
@@ -25,28 +23,3 @@ jobs:
       - name: Run Benchmark
         run: |
           lua SimpleBench.lua
-  benchmark:
-    needs: test
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        lua-version: [5.1, 5.2, 5.3]
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install Lua
-        run: |
-          sudo apt install lua${{ matrix.lua-version }}
-      - name: Run Benchmark
-        run: |
-          lua SimpleBench.lua > out/lua-${{ matrix.lua-version }}.txt
-      - name: Pull and Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git config pull.rebase true
-          git add .
-          git commit -m "Add generated results"
-          git pull
-          git push

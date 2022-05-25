@@ -1,5 +1,5 @@
 # Writes scores to the out/ directory
-name: Tests
+name: Scores
 
 on:
   schedule:

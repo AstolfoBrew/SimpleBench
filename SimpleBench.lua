@@ -119,42 +119,19 @@ local rsw = game and RBXWaitAfterRun and function() game:GetService('RunService'
 -- local BenchmarkStart = os.clock();
 local void = function(...) end
 -- runBenchmark('Empty Function', 512, function() end)
-for i = 1, Iterations, 1 do
-  print('//////// RUN ' .. tostring(i) .. ' OF ' .. tostring(Iterations) .. ' ////////')
+for run = 1, Iterations, 1 do
+  print('//////// RUN ' .. tostring(run) .. ' OF ' .. tostring(Iterations) .. ' ////////')
   runBenchmark('Empty Function', itPerBench, function() end, 26 / 3)
-  runBenchmark('void', itPerBench, function() void() end)
-  runBenchmark('i+1', itPerBench, (function()
-    local i = 0;
-    return function() void(i + 1); end
-  end)())
-  runBenchmark('i-1', itPerBench, (function()
-    local i = 0;
-    return function() void(i - 1); end
-  end)())
-  runBenchmark('i/2', itPerBench, (function()
-    local i = 1;
-    return function() void(i / 2); end
-  end)())
-  runBenchmark('i*2', itPerBench, (function()
-    local i = 1;
-    return function() void(i * 2); end
-  end)())
-  runBenchmark('i%2', itPerBench, (function()
-    local i = 21;
-    return function() void(i % 2); end
-  end)())
-  runBenchmark('i^2', itPerBench, (function()
-    local i = 5;
-    return function() void(i ^ 2); end
-  end)())
-  runBenchmark('1/i', itPerBench, (function()
-    local i = 5;
-    return function() void(1 / i); end
-  end)())
-  runBenchmark('sqrt(i)', itPerBench, (function()
-    local i = 5;
-    return function() void(math.sqrt(i)); end
-  end)())
+  runBenchmark('void', itPerBench, function() void() end, 22 / 3)
+  local i = 679483;
+  runBenchmark('i+1', itPerBench, function() void(i + 1); end)
+  runBenchmark('i-1', itPerBench, function() void(i - 1); end)
+  runBenchmark('i/2', itPerBench, function() void(i / 2); end)
+  runBenchmark('i*2', itPerBench, function() void(i * 2); end)
+  runBenchmark('i%2', itPerBench, function() void(i % 2); end)
+  runBenchmark('i^2', itPerBench, function() void(i ^ 2); end)
+  runBenchmark('1/i', itPerBench, function() void(1 / i); end)
+  runBenchmark('sqrt(i)', itPerBench, function() void(math.sqrt(i)); end)
   runBenchmark('index table nil', itPerBench, (function()
     local t = {};
     return function() void(t.a); end

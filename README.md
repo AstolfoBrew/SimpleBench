@@ -44,6 +44,8 @@ Soon:tm:
 
 1. Run this in your executor of choice:
 
+</span>
+
 ```lua
 local Settings = {
   ['RBXWaitAfterRun'] = false; -- If roblox never unfreezes, or it crashes, change false here to true.
@@ -52,6 +54,8 @@ local Settings = {
 };
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RobloxLoader.lua'))();
 ```
+
+<span align="center">
 
 2. Roblox will freeze for a bit. This is normal.
 

@@ -28,7 +28,7 @@ There are pre-calculated scores for [Luau](out/lua-luau.log), [Lua 5.1](out/lua-
 ## Setting Up
 
 1. Get a Lua Enironment
-2. Download SimpleBench ([Stable](https://github.com/AstolfoBrew/SimpleBench/releases/latest) (Recommended), or [Dev Build](https://github.com/AstolfoBrew/SimpleBench/blob/main/SimpleBench.lua))
+2. Download SimpleBench ([Stable](https://github.com/AstolfoBrew/SimpleBench/releases/latest/download/SimpleBench.lua) (Recommended), or [Dev Build](https://github.com/AstolfoBrew/SimpleBench/blob/main/SimpleBench.lua))
 3. Run SimpleBench in Lua (ie `lua SimpleBench.lua`)
 4. Look for the [Final Benchmark Score](https://github.com/AstolfoBrew/SimpleBench/blob/75f4e659bd86e26bfa5a32d3bbc1de5793161442/out/lua-5.3.log#L999) at the end of the output
 

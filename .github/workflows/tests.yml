@@ -26,13 +26,16 @@ jobs:
   test-luau:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Get Unzip
         run: |
           sudo apt install unzip
-      - name: Get Luau
+      - name: Download Luau
         run: |
           curl -L -i --output luau.zip https://github.com/Roblox/luau/releases/latest/download/luau-ubuntu.zip
+      - name: Unpack Luau
+        run: |
           echo "unzip -o -d luau luau.zip; echo done" > extract.sh
           chmod +x extract.sh
           ./extract.sh

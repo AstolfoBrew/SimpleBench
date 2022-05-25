@@ -21,14 +21,15 @@ jobs:
           sudo apt install lua${{ matrix.lua-version }}
       - name: Run Benchmark
         run: |
-          lua SimpleBench.lua > out/lua-${{ matrix.lua-version }}.txt
+          lua SimpleBench.lua > out/lua-${{ matrix.lua-version }}.log
       - name: Pull and Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git config pull.rebase true
+          git pull
           git add .
-          git commit -m "Add generated results"
+          git commit -m "Add generated results (Lua ${{ matrix.lua-version }}) [ci skip]"
           git pull
           git push
   benchmark-luau:
@@ -51,13 +52,14 @@ jobs:
       - name: Run Benchmark
         run: |
           chmod +x luau/luau
-          luau/luau SimpleBench.lua > out/lua-luau.txt
+          luau/luau SimpleBench.lua > out/lua-luau.log
       - name: Pull and Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git config pull.rebase true
+          git pull
           git add .
-          git commit -m "Add generated results"
+          git commit -m "Add generated results (Luau) [ci skip]"
           git pull
           git push

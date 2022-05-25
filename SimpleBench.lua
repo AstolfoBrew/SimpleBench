@@ -1,27 +1,47 @@
 ------------- ABOUT
 -- SimpleBench
 -- A Simple Pure Lua VM Benchmarking Library
--- Version: 1.1.1
+-- Version: 1.1.2-DEV
 -- Author: Yielding#3961
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench
 ------------- DO NOT TOUCH
-local Version = '1.1.1';
+local Version = '1.1.2-DEV';
 print('Setting up configuration for SimpleBench ' .. Version .. ' by Yielding#3961');
 ------------- CONFIG
 local Iterations = 50; --               Change to amount of total benchmark runs | Default: 50 | The higher, the longer the benchmark takes, but the more accurate/stable the result
 local RBXWaitAfterRun = false; --       Enable if, in roblox, an obfuscator (or horrible lua env) freezes for longer than 1s*runs
 ------------- CODE
+local print, warn, error = print, warn, error;
 -- External Settings
 if _G and _G.SimpleBenchSettings then
   local Settings = _G.SimpleBenchSettings;
-  if (typeof(Settings) ~= "table") then error('Invalid _G.SimpleBenchSettings.') end
+  if (typeof(Settings) ~= 'table') then return error('Invalid _G.SimpleBenchSettings.') end
   if typeof(Settings.Iteraions) == 'number' then Iterations = Settings.Iterations; end
   if typeof(Settings.RBXWaitAfterRun) == 'boolean' then RBXWaitAfterRun = Settings.RBXWaitAfterRun; end
-  if Settings.Branch and Settings.Branch ~= 'Release' then warn('Branch is not release. Results may vary between commits.'); end;
+  if Settings.Branch and Settings.Branch ~= 'Release' then warn('Branch is not release. Results may vary between commits.'); end
+  if typeof(Settings.Silent) == 'table' then
+    if typeof(Settings.Silent.print) == 'function' then
+      print = Settings.Silent.print;
+    elseif not Settings.Silent.print then
+      print = function() end
+    end
+    if typeof(Settings.Silent.warn) == 'function' then
+      warn = Settings.Silent.warn;
+    elseif not Settings.Silent.warn then
+      warn = function() end
+    end
+    if typeof(Settings.Silent.error) == 'function' then
+      error = Settings.Silent.error;
+    elseif not Settings.Silent.error then
+      error = function() end
+    end
+  elseif Settings.Silent then
+    print = function() end
+  end
 end
 -- Check to make sure Settings are valid
-if Iterations < 1 then error('Too little iterations! Must atleast have 1 iteration.'); end
+if Iterations < 1 then return error('Too little iterations! Must atleast have 1 iteration.'); end
 -- To Hex Utility
 function tohex(num)
   local v = string.format('%02X', num)

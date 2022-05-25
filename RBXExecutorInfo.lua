@@ -1,7 +1,7 @@
 ------------- ABOUT
 -- SimpleBench ExecutorInfo
 -- Used in RobloxLoader.lua to identify the executor. Also provides methods such as http requests.
--- Version: 1.1.1
+-- Version: 1.1.2-DEV
 -- Author: Yielding#3961
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench

@@ -1,7 +1,7 @@
 ------------- ABOUT
 -- SimpleBench Roblox Loader
 -- Loads the Simple Pure Lua VM Benchmarking Library, with some extra features
--- Version: 1.1.1
+-- Version: 1.1.2-DEV
 -- Author: Yielding#3961
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench

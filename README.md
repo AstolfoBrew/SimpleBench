@@ -13,6 +13,8 @@ A Simple Lua VM Benchmarking Library
 >
 > **SimpleBench does not adjust depending on the current hardware it's being ran on.**
 
+</span>
+
 ## Compatability
 
 SimpleBench is compatible with Lua 5.1 and upwards.<br/>
@@ -26,8 +28,6 @@ SimpleBench _is_ compatible with Luau, and therefor _almost_ any Roblox executor
 There are pre-calculated scores for [Luau](out/lua-luau.log), [Lua 5.1](out/lua-5.1.log), [Lua 5.2](out/lua-5.2.log) and [Lua 5.3](out/lua-5.3.log).
 
 Additionally, there are pre-calculated scores for [several Roblox executors](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox), including [Fluxus](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Fluxus), [Script-Ware](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Script-Ware), [Synapse V2](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Synapse%20v2) and [Temple](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Temple)
-
-</span>
 
 ## Setting Up
 

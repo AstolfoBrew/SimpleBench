@@ -59,6 +59,8 @@ loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/Simp
 
 2. Roblox will freeze for a bit. This is normal.
 
+---
+
 If your executor **does** support `writefile()`:
 
 1. Open `workspace/SimpleBench.log` (using Notepad, VS Code, or anything else that can open text files)
@@ -71,7 +73,9 @@ Final Score:
 
 3. `<Some Score>` is the final score.
 
-If your executor does **not** support `writefile()` (ie it doesn't have a workspace folder, or its a SS exec), or for some reason the above didn't work:
+---
+
+If your executor does **not** support `writefile()` however (ie it doesn't have a workspace folder, or its a SS exec), or for some reason the above didn't work:
 
 1. Press F9
 2. At the bottom, you should see `Final Benchmark Score <Some Score> (Averaged across <Some Number> iterations)`

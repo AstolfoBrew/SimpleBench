@@ -27,6 +27,8 @@ There are pre-calculated scores for [Luau](out/lua-luau.log), [Lua 5.1](out/lua-
 
 Additionally, there are pre-calculated scores for [several Roblox executors](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox), including [Fluxus](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Fluxus), [Script-Ware](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Script-Ware), [Synapse V2](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Synapse%20v2) and [Temple](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Temple)
 
+</span>
+
 ## Setting Up
 
 ### Regular Lua Envs
@@ -46,8 +48,6 @@ Soon:tm:
 
 1. Run this in your executor of choice:
 
-</span>
-
 ```lua
 local Settings = {
   ['RBXWaitAfterRun'] = false; -- If roblox never unfreezes, or it crashes, change false here to true.
@@ -56,8 +56,6 @@ local Settings = {
 };
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RBXExecutorLoader.lua'), 'RBXExecutorLoader.lua')(Settings);
 ```
-
-<span align="center">
 
 2. Roblox will freeze for a bit. This is normal.
 
@@ -82,5 +80,3 @@ If your executor does **not** support `writefile()` however (ie it doesn't have 
 1. Press F9
 2. At the bottom, you should see `Final Benchmark Score <Some Score> (Averaged across <Some Number> iterations)`
 3. The final score is `<Some Score>`
-
-</span>

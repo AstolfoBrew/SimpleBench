@@ -65,15 +65,15 @@ local log = '';
 if getgenv and writefile then
   pcall(function()
     getgenv().print = function(...)
-      log = log .. table.concat({...}, '\t') .. '\n';
+      log = log .. (table.concat({...}, '\t')) .. '\n';
       return oldPrint(...)
     end
     getgenv().warn = function(...)
-      log = log .. table.concat({'WARN:'; ...}, '\t') .. '\n';
+      log = log .. (table.concat({'WARN:'; ...}, '\t')) .. '\n';
       return oldWarn(...)
     end
     getgenv().error = function(...)
-      log = log .. table.concat({'ERROR:'; ...}, '\t') .. '\n';
+      log = log .. (table.concat({'ERROR:'; ...}, '\t')) .. '\n';
       return oldError(...)
     end
   end)

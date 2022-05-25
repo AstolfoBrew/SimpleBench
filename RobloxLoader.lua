@@ -47,8 +47,8 @@ local ScriptSrc = game:HttpGetAsync(ScriptUrl);
 
 local ExecInfoSrcChunk, Err = loadstring(ExecInfoSrc);
 local ExecInfo;
-if typeof(ExecInfoSrcChunk) == 'function' then
-  warn('Error getting Executor Information Chunkname: ', Err)
+if typeof(ExecInfoSrcChunk) ~= 'function' then
+  warn('Error getting Executor Information Chunkname: ', Err or ExecInfoSrcChunk)
   ExecInfo = {['name'] = 'Unknown'};
 else
   ExecInfo = ExecInfoSrcChunk();

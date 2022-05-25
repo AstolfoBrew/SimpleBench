@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Lua
         run: |
-          apt install ${{ matrix.lua-version }}
+          sudo apt install ${{ matrix.lua-version }}
       - name: Run Benchmark
         run: |
           lua SimpleBench.lua

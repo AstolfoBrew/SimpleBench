@@ -16,7 +16,6 @@ local print, warn, error = print, warn, error;
 -- External Settings
 if _G and _G.SimpleBenchSettings then
   local Settings = _G.SimpleBenchSettings;
-  print(Settings)
   if (typeof(Settings) ~= 'table') then return error('Invalid _G.SimpleBenchSettings.') end
   if typeof(Settings.Iterations) == 'number' then Iterations = Settings.Iterations; end
   if typeof(Settings.RBXWaitAfterRun) == 'boolean' or Settings.RBXWaitAfterRun then

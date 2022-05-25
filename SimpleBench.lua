@@ -20,12 +20,15 @@ end
 
 print('-- Opcode Test')
 print('-- -> Tests if the VM is functioning as expected')
-print('-- (expected: 0,1,2)')
+print('-- (expected: 0, 1, 2, 3)')
 for i = 0, 3, 1 do print('loop    0x01    | ', i) end
+print('-- (expected: 1 : 1, 2: 7, 3 : 5)')
 local p = {1; '7'; 5}
 for k in pairs(p) do print('loop    0x02    | ', k, ':', p[k]) end
+print('-- (expected: 1 : 1, 2 : 7, 3 : 5)')
 for k, v in ipairs(p) do print('loop    0x03    | ', k, ':', v) end
 
+print('-- (expected: 6)')
 print('len     0x04    | ', #'length')
 
 print('-- below are checked for errors')

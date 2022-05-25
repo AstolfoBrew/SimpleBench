@@ -1,17 +1,28 @@
 ------------- ABOUT
 -- SimpleBench
 -- A Simple Pure Lua VM Benchmarking Library
--- Version: 1.1.0
+-- Version: 1.1.1
 -- Author: Yielding#3961
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench
 ------------- DO NOT TOUCH
-local Version = '1.1.0';
+local Version = '1.1.1';
 print('Setting up configuration for SimpleBench ' .. Version .. ' by Yielding#3961');
 ------------- CONFIG
-local Iterations = 50; --         Change to amount of total benchmark runs | Default: 50 | The higher, the longer the benchmark takes, but the more accurate/stable the result
-local RBXWaitAfterRun = true; --  Enable if, in roblox, an obfuscator (or horrible lua env) freezes for longer than 1s*runs
+local Iterations = 50; --               Change to amount of total benchmark runs | Default: 50 | The higher, the longer the benchmark takes, but the more accurate/stable the result
+local RBXWaitAfterRun = false; --       Enable if, in roblox, an obfuscator (or horrible lua env) freezes for longer than 1s*runs
 ------------- CODE
+-- External Settings
+if _G and _G.SimpleBenchSettings then
+  local Settings = _G.SimpleBenchSettings;
+  if (typeof(Settings) ~= "table") then error('Invalid _G.SimpleBenchSettings.') end
+  if typeof(Settings.Iteraions) == 'number' then Iterations = Settings.Iterations; end
+  if typeof(Settings.RBXWaitAfterRun) == 'boolean' then RBXWaitAfterRun = Settings.RBXWaitAfterRun; end
+  if Settings.Branch and Settings.Branch ~= 'Release' then warn('Branch is not release. Results may vary between commits.'); end;
+end
+-- Check to make sure Settings are valid
+if Iterations < 1 then error('Too little iterations! Must atleast have 1 iteration.'); end
+-- To Hex Utility
 function tohex(num)
   local v = string.format('%02X', num)
   if #v == 1 then v = '0' .. v end
@@ -98,7 +109,7 @@ else
   print(v)
 end
 print('\n-- Benchmarks')
-local Score = 0;
+local TotalScore = 0;
 local runBenchmark = function(n, c, cb, div)
   local div = div or 1; -- For proportionally giant scores (such as empty func)
   local padding = 20
@@ -111,7 +122,7 @@ local runBenchmark = function(n, c, cb, div)
   local ThisScore = (1 / avg / c) / div
   print('Benchmark', n, 'Ran ' .. tostring(c) .. ' times with an average duration of ' .. tostring(avg) .. 's/run',
         '(Score: ' .. ThisScore .. ')')
-  Score = Score + ThisScore
+  TotalScore = TotalScore + ThisScore
 end
 
 local itPerBench = 262144;
@@ -132,7 +143,7 @@ for run = 1, Iterations, 1 do
   runBenchmark('i^2', itPerBench, function() void(i ^ 2); end)
   runBenchmark('1/i', itPerBench, function() void(1 / i); end)
   runBenchmark('sqrt(i)', itPerBench, function() void(math.sqrt(i)); end)
-  runBenchmark('s..s', itPerBench, function() void(i..i); end)
+  runBenchmark('s..s', itPerBench, function() void(i .. i); end)
   runBenchmark('index table nil', itPerBench, (function()
     local t = {};
     return function() void(t.a); end
@@ -169,10 +180,10 @@ end
 
 -- local BenchmarkTime = BenchmarkEnd - BenchmarkStart
 -- print('Final Benchmark Score', ' ', ' ', 1 / BenchmarkTime)
-print('Final Benchmark Score', ' ', ' ', Score / Iterations, '(Averaged across ' .. Iterations .. ' iterations)')
+print('Final Benchmark Score', ' ', ' ', TotalScore / Iterations, '(Averaged across ' .. Iterations .. ' iterations)')
 print('SimpleBench ' .. Version .. ' by Yielding#3961')
 
-return 0
+return TotalScore / Iterations
 
 --[[
   https://github.com/AstolfoBrew/SimpleBench/blob/main/LICENSE

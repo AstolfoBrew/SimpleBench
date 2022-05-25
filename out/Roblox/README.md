@@ -6,7 +6,7 @@ local Settings = {
   ['Branch'] = 'main'; --      Change to `main` if you want to use the latest development version. Please note that it's score may be different between commits.
   ['Iterations'] = 128; --         If your results vary a lot, increase this. If, with RBXWaitAfterRun, it takes way too long, you can lower this number, however this will make the result less accurate.
 };
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RBXExecutorLoader.lua'))();
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RBXExecutorLoader.lua'))(Settings);
 ```
 
 In a PR, your file MUST include the **FULL OUTPUT** combined with a first line containing the most recent commit that modified SimpleBench.lua, aswell as further info, in the following format:

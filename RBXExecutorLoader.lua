@@ -33,7 +33,7 @@ local RepoSplit = {'AstolfoBrew'; 'SimpleBench'};
 if string.split then RepoSplit = string.split(Repo, '/') end
 local RepoOwner = RepoSplit[1] or 'AstolfoBrew';
 local RepoName = RepoSplit[2] or 'SimpleBench';
-local ExecInfoUrl = string.format('https://raw.githubusercontent.com/%s/%s/%s/ExecutorInfo.lua', RepoOwner, RepoName,
+local ExecInfoUrl = string.format('https://raw.githubusercontent.com/%s/%s/%s/RBXExecutorInfo.lua', RepoOwner, RepoName,
                                   Settings.Branch == 'Release' and 'main' or Settings.Branch);
 local ExecInfoSrc = game:HttpGetAsync(ExecInfoUrl);
 local ScriptUrl = Settings.Branch == 'Release' and

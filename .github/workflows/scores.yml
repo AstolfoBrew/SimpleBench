@@ -50,7 +50,8 @@ jobs:
           rm extract.sh
       - name: Run Benchmark
         run: |
-          lua SimpleBench.lua > out/lua-luau.txt
+          chmod +x luau/luau
+          luau/luau SimpleBench.lua > out/lua-luau.txt
       - name: Pull and Push
         run: |
           git config user.name github-actions

@@ -1,5 +1,9 @@
 <span align="center">
 
+  ***NOTICE:*** Fluxus has changed their domain!<br/>
+  [https://fluxteam.xyz](https://fluxteam.xyz) -> [https://fluxteam.net](https://fluxteam.net)<br/>
+  Spread the word!
+
 # Simple ┬─┬ Bench
 
 [![Tests](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml/badge.svg)](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml)

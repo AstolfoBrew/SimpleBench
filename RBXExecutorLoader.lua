@@ -100,7 +100,7 @@ if getgenv and writefile then
 	end)
 end
 
-print("Running SimpleBench from", Repo)
+print("Running SimpleBench from " .. Repo)
 local FinalScore = loadstring(ScriptSrc, "SimpleBench.lua")()
 
 if writefile then

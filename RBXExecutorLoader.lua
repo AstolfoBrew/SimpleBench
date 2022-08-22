@@ -27,23 +27,18 @@ if Args[1] then
 		if typeof(Settings[k]) == typeof(v) or typeof(Settings[k]) == "nil" then
 			Settings[k] = v
 		else
-			error(
-				"Invalid Settings Type: Expected "
-					.. typeof(Settings[k])
-					.. ", got "
-					.. typeof(v)
-					.. " for setting "
-					.. k
-			)
+			error(string.format("Invalid Settings Type: Expected %s, got %s for setting", typeof(Settings[k]), typeof(v), k))
 		end
 	end
 end
 _G.SimpleBenchSettings = Settings
+
 local Repo = Args[2] or "AstolfoBrew/SimpleBench"
 local RepoSplit = { "AstolfoBrew", "SimpleBench" }
 if string.split then
 	RepoSplit = string.split(Repo, "/")
 end
+
 local RepoOwner = RepoSplit[1] or "AstolfoBrew"
 local RepoName = RepoSplit[2] or "SimpleBench"
 local ExecInfoUrl = string.format(
@@ -105,6 +100,7 @@ if getgenv and writefile then
 	end)
 end
 
+print("Running SimpleBench from", Repo)
 local FinalScore = loadstring(ScriptSrc, "SimpleBench.lua")()
 
 if writefile then

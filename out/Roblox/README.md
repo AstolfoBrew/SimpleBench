@@ -3,7 +3,12 @@
 To add a script to this list, use this script:
 
 ```lua
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RBXExecutorLoader.lua'))({['RBXWaitAfterRun'] = true;['Branch'] = 'main';['Iterations'] = 128;});
+local Repo = "AstolfoBrew/SimpleBench"
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/".. Repo .."/main/RBXExecutorLoader.lua"))({
+	["RBXWaitAfterRun"] = true,
+	["Branch"] = "main",
+	["Iterations"] = 128,
+}, Repo)
 ```
 
 In a PR, your file MUST include the **FULL OUTPUT** combined with a first line containing the most recent commit that modified SimpleBench.lua, aswell as further info, in the following format:

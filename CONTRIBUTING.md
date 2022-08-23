@@ -17,9 +17,19 @@ Commits here *should* follow the [Conventional Commits Standard](https://www.con
 
 PRs which do not follow this standard have a lower chance of getting merged.
 
+###### Scores
+
+> For submitting scores, simply do something like `feat: Add new <EXECUTOR> result`, with an optional 2nd line containing the score
+
+## Submitting Scores
+
+Roblox Executor Scores must follow [these guidelines](out/Roblox/).
+
+They should follow [the score-specific commit message guideline](#scores) aswell, if possible.
+
 ## Formatter/Linter
 
-You should use one of the following linters/formatters on/for your code:
+You should use one of the following linters/formatters on/for all submitted code:
 - [Stylua](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua) ([Repo](https://github.com/johnnymorganz/stylua)) or;
 - [LuaFormatter](https://marketplace.visualstudio.com/items?itemName=Koihik.vscode-lua-format) ([Repo](https://github.com/Koihik/LuaFormatter)) using the configs specified in this repository.
 

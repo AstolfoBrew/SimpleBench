@@ -1,6 +1,6 @@
 ## Per-Executor
 
-To add a script to this list, use this script:
+To add a result to this list, use this script:
 
 ```lua
 local Repo = 'AstolfoBrew/SimpleBench';

@@ -30,7 +30,7 @@ There are pre-calculated scores for [Luau](out/lua-luau.log), [Lua 5.1](out/lua-
 
 Additionally, there are pre-calculated scores for [several Roblox executors](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox), including [Fluxus](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Fluxus), [Script-Ware V2](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Script-Ware%20v2), [Script-Ware MacOS](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Script-Ware%20MacOS) (Soon\*), [Synapse V2](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Synapse%20v2) and [Temple](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox/Temple)
 
-###### \*When someone [opens a PR](https://github.com/AstolfoBrew/SimpleBench/pulls) (You can [fork simplebench here](https://github.com/AstolfoBrew/SimpleBench/fork) - See the [result submission guidelines](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox#per-executor) and the [CONTRIBUTING](CONTRIBUTING.md) information)
+###### \*When someone [opens a PR](https://github.com/AstolfoBrew/SimpleBench/pulls) (You can [fork simplebench here](https://github.com/AstolfoBrew/SimpleBench/fork) - See the [result submission](https://github.com/AstolfoBrew/SimpleBench/tree/main/out/Roblox#per-executor) and [CONTRIBUTING](CONTRIBUTING.md) guidelines)
 
 ## Setting Up
 

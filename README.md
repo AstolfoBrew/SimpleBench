@@ -8,6 +8,9 @@
 
 A Simple Lua VM Benchmarking Library
 
+###### ⭐
+If you find this repository useful, giving it a ⭐ Star would be much appreciated!
+
 ### Notice
 
 > Scores may vary depending on the device.<br/>

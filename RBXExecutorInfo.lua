@@ -38,34 +38,38 @@ elseif FLUXUS_LOADED then
   exploit_type = 'Fluxus'
 end
 --
-local rawinfo = {['name'] = exploit_type; ['http'] = http_request; ['hwid'] = nil; ['id'] = nil}
+local rawinfo = { ['name'] = exploit_type, ['http'] = http_request, ['hwid'] = nil, ['id'] = nil }
 local info = rawinfo
 if setmetatable then
   local hwid
   local id
   local clientInfo
-  local hwidHeaders = {'Sw-Fingerprint'; 'Fingerprint'; 'Syn-Fingerprint'}
+  local hwidHeaders = { 'Sw-Fingerprint', 'Fingerprint', 'Syn-Fingerprint' }
   local idHeaders = {
-    'Sw-User-Identifier';
-    'User-Identifier';
-    'Syn-User-Identifier';
-    (unpack or table.unpack and (unpack or table.unpack)(hwidHeaders));
+    'Sw-User-Identifier',
+    'User-Identifier',
+    'Syn-User-Identifier',
+    (unpack or table.unpack and (unpack or table.unpack)(hwidHeaders)),
   }
   local getClientInfo = function()
-    if not clientInfo then clientInfo = rawinfo.http({Url = 'https://httpbin.org/get'}) end
+    if not clientInfo then
+      clientInfo = rawinfo.http { Url = 'https://httpbin.org/get' }
+    end
     return clientInfo
   end
   info = setmetatable({}, {
     __index = function(t, k)
       k = string.lower(k)
-      if rawinfo[k] then return rawinfo[k] end
+      if rawinfo[k] then
+        return rawinfo[k]
+      end
       -------------- HWID
       if k == 'hwid' then
         if hwid then
           return hwid
         else
           if not string.find or not string.lower then
-            error('{SimpleBench Exec Info} ~ Cannot search string without string.find and string.lower')
+            error '{SimpleBench Exec Info} ~ Cannot search string without string.find and string.lower'
           end
           local Body = getClientInfo().Body
           local ParsedBody = typeof(Body) == 'string' and game:GetService('HttpService'):JSONDecode(Body) or Body
@@ -86,9 +90,11 @@ if setmetatable then
       end
       -------------- EXEC USER ID
       if k == 'id' then
-        if id then return id end
+        if id then
+          return id
+        end
         if not string.find or not string.lower then
-          error('{SimpleBench Exec Info} ~ Cannot search string without string.find and string.lower')
+          error '{SimpleBench Exec Info} ~ Cannot search string without string.find and string.lower'
         end
         local Body = getClientInfo().Body
         local ParsedBody = typeof(Body) == 'string' and game:GetService('HttpService'):JSONDecode(Body) or Body
@@ -107,7 +113,7 @@ if setmetatable then
         end
         return id
       end
-    end;
+    end,
   })
 end
 return info

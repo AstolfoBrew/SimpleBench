@@ -52,11 +52,12 @@ Soon:tm:
 
 ```lua
 local Settings = {
+  ['Repo'] = 'AstolfoBrew/SimpleBench'; -- Repository path, if you are forking this then you should change it to your Repo.
   ['RBXWaitAfterRun'] = false; -- If roblox never unfreezes, or it crashes, change false here to true.
   ['Branch'] = 'Release'; --      Change to `main` if you want to use the latest development version. Please note that it's score may be different between commits.
   ['Iterations'] = 50; --         If your results vary a lot, increase this. If, with RBXWaitAfterRun, it takes way too long, you can lower this number, however this will make the result less accurate.
 };
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/AstolfoBrew/SimpleBench/main/RBXExecutorLoader.lua'), 'RBXExecutorLoader.lua')(Settings);
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/'.. Settings.Repo ..'/main/RBXExecutorLoader.lua'), 'RBXExecutorLoader.lua')(Settings, Settings.Repo);
 ```
 
 2. Roblox will freeze for a bit. This is normal.

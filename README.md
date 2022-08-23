@@ -4,7 +4,7 @@
 
 # Simple ┬─┬ Bench
 
-[![Tests](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml/badge.svg)](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml)
+[![Tests](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml/badge.svg)](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/tests.yml) [![Linter](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/lint.yml/badge.svg)](https://github.com/AstolfoBrew/SimpleBench/actions/workflows/lint.yml)
 
 A Simple Lua VM Benchmarking Library
 

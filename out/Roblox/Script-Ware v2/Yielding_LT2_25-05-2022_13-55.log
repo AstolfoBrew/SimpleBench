@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Script-Ware in Lumber Tycoon 2 on 25.05.2022 at 1:55PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
+Ran by Expo#3961 on Script-Ware in Lumber Tycoon 2 on 25.05.2022 at 1:55PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
 
 Final Score:
 708.9573803463508
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.1.2-DEV by Yielding#3961
+Setting up configuration for SimpleBench 1.1.2-DEV by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -2488,4 +2488,4 @@ Benchmark	newindex metamethod 	Ran 262144 times with an average duration of 9.39
 Benchmark	for loop            	Ran 262144 times with an average duration of 9.316520691027286e-08s/run	(Score: 40.94551380429954)
 Benchmark	for in loop         	Ran 262144 times with an average duration of 3.4896392822614253e-07s/run	(Score: 10.931494510094247)
 Final Benchmark Score	 	 	708.9573803463508	(Averaged across 128 iterations)
-SimpleBench 1.1.2-DEV by Yielding#3961
+SimpleBench 1.1.2-DEV by Expo#3961

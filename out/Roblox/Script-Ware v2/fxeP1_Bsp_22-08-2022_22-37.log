@@ -7,7 +7,7 @@ Final Score:
 ------ LOGS ------
 
 Running SimpleBench from AstolfoBrew/SimpleBench
-Setting up configuration for SimpleBench 1.2.0-DEV.1 by Yielding#3961
+Setting up configuration for SimpleBench 1.2.0-DEV.1 by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -4153,4 +4153,4 @@ Benchmark	str.format          	Ran 262144 times with an average duration of 3.96
 Benchmark	tonumber(i)         	Ran 262144 times with an average duration of 2.6890945437063607e-07s/run	(Score: 2.8371611363036933)
 Benchmark	tostring(i)         	Ran 262144 times with an average duration of 2.153171539398535e-07s/run	(Score: 17.716643545690715)
 Final Benchmark Score	 	 	1362.9288064262323	(Averaged across 128 iterations)
-SimpleBench 1.2.0-DEV.1 by Yielding#3961
+SimpleBench 1.2.0-DEV.1 by Expo#3961

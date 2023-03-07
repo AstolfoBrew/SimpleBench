@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Temple in Lumber Tycoon 2 on 25.05.2022 at 2:16PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
+Ran by Expo#3961 on Temple in Lumber Tycoon 2 on 25.05.2022 at 2:16PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
 
 Final Score:
 756.2064271776022
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.1.2-DEV by Yielding#3961
+Setting up configuration for SimpleBench 1.1.2-DEV by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -2488,4 +2488,4 @@ Benchmark	newindex metamethod 	Ran 262144 times with an average duration of 9.26
 Benchmark	for loop            	Ran 262144 times with an average duration of 9.13482665898524e-08s/run	(Score: 41.75993051682891)
 Benchmark	for in loop         	Ran 262144 times with an average duration of 2.264202117741032e-07s/run	(Score: 16.8478654610167)
 Final Benchmark Score	 	 	756.2064271776022	(Averaged across 128 iterations)
-SimpleBench 1.1.2-DEV by Yielding#3961
+SimpleBench 1.1.2-DEV by Expo#3961

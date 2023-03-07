@@ -20,5 +20,5 @@ Ran by DiscordUsername#0001 on Executor in Game on Date-in-DD.MM.YYYY-Format at 
 Example:
 
 ```yml
-Ran by Yielding#3961 on Script-Ware in Lumber Tycoon 2 on 25.05.2022 at 1:55PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
+Ran by Expo#3961 on Script-Ware in Lumber Tycoon 2 on 25.05.2022 at 1:55PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
 ```

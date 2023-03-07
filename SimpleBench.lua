@@ -7,7 +7,7 @@
 -- https://github.com/AstolfoBrew/SimpleBench
 ------------- DO NOT TOUCH
 local Version = '1.2.0-DEV.1'
-print('Setting up configuration for SimpleBench ' .. Version .. ' by Yielding#3961')
+print('Setting up configuration for SimpleBench ' .. Version .. ' by Expo#3961')
 ------------- CONFIG
 local Iterations = 50 --               Change to amount of total benchmark runs | Default: 50 | The higher, the longer the benchmark takes, but the more accurate/stable the result
 local RBXWaitAfterRun = false --       Enable if, in roblox, an obfuscator (or horrible lua env) freezes for longer than 1s*runs
@@ -347,7 +347,7 @@ end
 -- local BenchmarkTime = BenchmarkEnd - BenchmarkStart
 -- print('Final Benchmark Score', ' ', ' ', 1 / BenchmarkTime)
 print('Final Benchmark Score', ' ', ' ', TotalScore / Iterations, '(Averaged across ' .. Iterations .. ' iterations)')
-print('SimpleBench ' .. Version .. ' by Yielding#3961')
+print('SimpleBench ' .. Version .. ' by Expo#3961')
 
 return TotalScore / Iterations
 
@@ -356,7 +356,7 @@ return TotalScore / Iterations
   ============================================================
   MIT License
 
-  Copyright (c) 2022 Yielding#3961
+  Copyright (c) 2022 Expo#3961
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal

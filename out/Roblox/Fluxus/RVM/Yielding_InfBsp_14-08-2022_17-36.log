@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Fluxus (RVM) in Infinite Baseplate (8765384021) on 14.08.2022 at 5:36PM CEST on version 1.2.0-DEV.1 (7fd7d36)
+Ran by Expo#3961 on Fluxus (RVM) in Infinite Baseplate (8765384021) on 14.08.2022 at 5:36PM CEST on version 1.2.0-DEV.1 (7fd7d36)
 
 Final Score:
 913.769945424335
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.2.0-DEV.1 by Yielding#3961
+Setting up configuration for SimpleBench 1.2.0-DEV.1 by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -4152,4 +4152,4 @@ Benchmark	str.format          	Ran 262144 times with an average duration of 4.26
 Benchmark	tonumber(i)         	Ran 262144 times with an average duration of 2.074562072684749e-07s/run	(Score: 3.677592794982792)
 Benchmark	tostring(i)         	Ran 262144 times with an average duration of 1.629421234050632e-07s/run	(Score: 23.411363408723467)
 Final Benchmark Score	 	 	913.769945424335	(Averaged across 128 iterations)
-SimpleBench 1.2.0-DEV.1 by Yielding#3961
+SimpleBench 1.2.0-DEV.1 by Expo#3961

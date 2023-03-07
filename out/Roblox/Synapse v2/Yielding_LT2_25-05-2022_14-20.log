@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Synapse v2 in Lumber Tycoon 2 on 25.05.2022 at 2:20PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
+Ran by Expo#3961 on Synapse v2 in Lumber Tycoon 2 on 25.05.2022 at 2:20PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
 
 Final Score:
 266.2899230358634
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.1.2-DEV by Yielding#3961
+Setting up configuration for SimpleBench 1.1.2-DEV by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -2488,4 +2488,4 @@ Benchmark	newindex metamethod 	Ran 262144 times with an average duration of 2.43
 Benchmark	for loop            	Ran 262144 times with an average duration of 2.5780830381627595e-07s/run	(Score: 14.796642346879173)
 Benchmark	for in loop         	Ran 262144 times with an average duration of 3.8101730348572005e-07s/run	(Score: 10.011874082164798)
 Final Benchmark Score	 	 	266.2899230358634	(Averaged across 128 iterations)
-SimpleBench 1.1.2-DEV by Yielding#3961
+SimpleBench 1.1.2-DEV by Expo#3961

@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Script-Ware in Infinite Baseplate (8765384021) on 14.08.2022 at 5:28PM CEST on version 1.2.0-DEV.1 (7fd7d36)
+Ran by Expo#3961 on Script-Ware in Infinite Baseplate (8765384021) on 14.08.2022 at 5:28PM CEST on version 1.2.0-DEV.1 (7fd7d36)
 
 Final Score:
 996.6283776918328
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.2.0-DEV.1 by Yielding#3961
+Setting up configuration for SimpleBench 1.2.0-DEV.1 by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -4152,4 +4152,4 @@ Benchmark	str.format          	Ran 262144 times with an average duration of 5.13
 Benchmark	tonumber(i)         	Ran 262144 times with an average duration of 3.3292274476126593e-07s/run	(Score: 2.291641124345808)
 Benchmark	tostring(i)         	Ran 262144 times with an average duration of 2.580863952550416e-07s/run	(Score: 14.780698772809417)
 Final Benchmark Score	 	 	996.6283776918328	(Averaged across 128 iterations)
-SimpleBench 1.2.0-DEV.1 by Yielding#3961
+SimpleBench 1.2.0-DEV.1 by Expo#3961

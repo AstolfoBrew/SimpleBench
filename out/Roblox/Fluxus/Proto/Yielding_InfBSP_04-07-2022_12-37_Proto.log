@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Fluxus in https://www.roblox.com/games/8765384021/Baseplate on 04.07.2022-Format at 12:37PM GMT+2 on version 1.2.0-DEV.1 (4b986c7c8f9377fe3d1f33810cd701de794d3581)
+Ran by Expo#3961 on Fluxus in https://www.roblox.com/games/8765384021/Baseplate on 04.07.2022-Format at 12:37PM GMT+2 on version 1.2.0-DEV.1 (4b986c7c8f9377fe3d1f33810cd701de794d3581)
 Execution Method: Proto Conversion
 
 Final Score:
@@ -7,7 +7,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.2.0-DEV.1 by Yielding#3961
+Setting up configuration for SimpleBench 1.2.0-DEV.1 by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -4153,5 +4153,5 @@ Benchmark	str.format          	Ran 262144 times with an average duration of 4.23
 Benchmark	tonumber(i)         	Ran 262144 times with an average duration of 2.1424217223897646e-07s/run	(Score: 1.1870359060679847)
 Benchmark	tostring(i)         	Ran 262144 times with an average duration of 1.797008514423104e-07s/run	(Score: 7.076014081193965)
 Final Benchmark Score	 	 	271.41651286490975	(Averaged across 128 iterations)
-SimpleBench 1.2.0-DEV.1 by Yielding#3961
+SimpleBench 1.2.0-DEV.1 by Expo#3961
 

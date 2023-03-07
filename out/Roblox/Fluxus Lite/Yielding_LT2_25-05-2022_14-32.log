@@ -1,4 +1,4 @@
-Ran by Yielding#3961 on Fluxus Lite in Lumber Tycoon 2 on 25.05.2022 at 2:32PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
+Ran by Expo#3961 on Fluxus Lite in Lumber Tycoon 2 on 25.05.2022 at 2:32PM CEST on version 1.1.2-DEV (bcc942f784beea7f939c60729eb0686ea4987b4c)
 
 Final Score:
 633.4342606614259
@@ -6,7 +6,7 @@ Final Score:
 
 ------ LOGS ------
 
-Setting up configuration for SimpleBench 1.1.2-DEV by Yielding#3961
+Setting up configuration for SimpleBench 1.1.2-DEV by Expo#3961
 WARN:	Branch is not release. Results may vary between commits.
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
@@ -2488,4 +2488,4 @@ Benchmark	newindex metamethod 	Ran 262144 times with an average duration of 1.13
 Benchmark	for loop            	Ran 262144 times with an average duration of 1.0800323488324715e-07s/run	(Score: 35.3202130449957)
 Benchmark	for in loop         	Ran 262144 times with an average duration of 2.7203063965308694e-07s/run	(Score: 14.023042663465324)
 Final Benchmark Score	 	 	633.4342606614259	(Averaged across 128 iterations)
-SimpleBench 1.1.2-DEV by Yielding#3961
+SimpleBench 1.1.2-DEV by Expo#3961

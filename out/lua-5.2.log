@@ -1,4 +1,4 @@
-Setting up configuration for SimpleBench 1.2.0-DEV.1 by Yielding#3961
+Setting up configuration for SimpleBench 1.2.0-DEV.1 by Expo#3961
 -- Opcode Test
 -- -> Tests if the VM is functioning as expected
 -- (expected: 0, 1, 2, 3)
@@ -1647,4 +1647,4 @@ Benchmark	str.format          	Ran 262144 times with an average duration of 4.45
 Benchmark	tonumber(i)         	Ran 262144 times with an average duration of 1.5895462036132e-07s/run	(Score: 4.7997312150521)
 Benchmark	tostring(i)         	Ran 262144 times with an average duration of 5.8083724975588e-07s/run	(Score: 6.5675837202733)
 Final Benchmark Score	 	 	827.85943497792	(Averaged across 50 iterations)
-SimpleBench 1.2.0-DEV.1 by Yielding#3961
+SimpleBench 1.2.0-DEV.1 by Expo#3961

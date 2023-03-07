@@ -2,7 +2,7 @@
 -- SimpleBench
 -- A Simple Pure Lua VM Benchmarking Library
 -- Version: 1.1.2-DEV.2
--- Author: Yielding#3961
+-- Author: Expo#3961
 -- License: MIT
 -- https://github.com/AstolfoBrew/SimpleBench
 ------------- DO NOT TOUCH

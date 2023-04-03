@@ -9,7 +9,7 @@
 A Simple Lua VM Benchmarking Library
 
 ###### ⭐
-If you find this repository useful, giving it a ⭐ Star would be much appreciated!
+If you find this repository useful, giving it a ⭐ would be much appreciated!
 
 ### Notice
 
@@ -20,7 +20,7 @@ If you find this repository useful, giving it a ⭐ Star would be much appreciat
 
 </span>
 
-## Compatability
+## Compatibility
 
 SimpleBench is compatible with Lua 5.1 and upwards.<br/>
 It _should_ be compatible with LuaJIT, but thats not included in the tests.<br/>
@@ -41,7 +41,7 @@ Additionally, there are pre-calculated scores for [several Roblox executors](htt
 
 ### Regular Lua Envs
 
-In a regular lua environment, simply follow these steps:
+In a regular Lua environment, simply follow these steps:
 
 1. Get a Lua Enironment
 2. Download SimpleBench ([Stable](https://github.com/AstolfoBrew/SimpleBench/releases/latest/download/SimpleBench.lua) (Recommended), or [Dev Build](https://github.com/AstolfoBrew/SimpleBench/blob/main/SimpleBench.lua))
